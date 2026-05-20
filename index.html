@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English/Hebrew Textblock Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>English/Hebrew Textblock Builder</h1>
+    <p class="subtitle">Build text quickly using clickable preset words and free typing.</p>
+
+    <section class="panel">
+      <h2>Preset words</h2>
+      <label for="language-select">Language</label>
+      <select id="language-select" aria-label="Choose language"></select>
+      <div id="word-bank" class="word-bank" aria-label="Preset word buttons"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Type custom text</h2>
+      <div class="input-row">
+        <input id="custom-input" type="text" placeholder="Type a word or phrase" />
+        <button id="add-custom" type="button">Add to Textblock</button>
+      </div>
+      <div class="actions top-actions">
+        <button id="add-preset" type="button">Add as Preset</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Textblock</h2>
+      <textarea id="textblock" rows="7" placeholder="Your built text appears here"></textarea>
+      <div class="actions">
+        <button id="clear" type="button">Clear</button>
+        <button id="copy" type="button">Copy</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
